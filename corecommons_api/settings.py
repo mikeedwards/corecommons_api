@@ -1,5 +1,11 @@
 # Django settings for corecommons_api project.
 import dj_database_url
+import djcelery
+
+djcelery.setup_loader()
+
+BROKER_BACKEND = 'django'
+
 DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
 }
@@ -111,6 +117,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'gunicorn',
+    'kombu.transport.django',
+    'djcelery',
 )
 
 # A sample logging configuration. The only tangible logging

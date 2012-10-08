@@ -1,3 +1,4 @@
 *.log
 *.pot
 *.pyc
+celerybeat-schedule.db
