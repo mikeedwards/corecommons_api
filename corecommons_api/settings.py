@@ -119,6 +119,11 @@ INSTALLED_APPS = (
     'gunicorn',
     'kombu.transport.django',
     'djcelery',
+    'tastypie',
+    'south',
+    'django_extensions',
+
+    'core',
 )
 
 # A sample logging configuration. The only tangible logging
